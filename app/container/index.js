@@ -1,0 +1,6 @@
+export { default as About } from "./about"
+export { default as Feature } from "./feature"
+export { default as Hero } from "./hero"
+export { default as Pricing } from "./pricing"
+export { default as Team } from "./team"
+export { default as Testimonial } from "./testimonials"
