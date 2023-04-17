@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MdSportsGymnastics } from "react-icons/md";
 
 const About = () => {
@@ -59,7 +60,9 @@ const About = () => {
             </div>
           ))}
         </div>
-        <button className="bg-pink-500 text-white w-32 p-2 rounded-full">About us</button>
+        <Link className="bg-pink-500 text-white text-center w-32 p-2 rounded-full" href="/about">
+          About us
+        </Link>
       </div>
     </section>
   );
