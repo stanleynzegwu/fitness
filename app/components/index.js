@@ -1,2 +1,7 @@
 export {default as Footer} from "./footer"
 export {default as Navbar} from "./navBar"
+export {default as SearchBar} from "./searchBar"
+export {default as Exercises} from "./exercises"
+export {default as ExerciseCard} from "./exerciseCard"
+export {default as HorizontalScrollBar} from "./horizontalScrollBar"
+export {default as BodyPart} from "./bodyPart"

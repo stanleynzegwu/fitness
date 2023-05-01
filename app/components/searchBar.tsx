@@ -1,12 +1,29 @@
 "use client";
 
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
+
+// interface BodyPart {
+//   id: number;
+//   name: string;
+// }
 
 const SearchBar = () => {
   const [search, setSearch] = useState("");
   const [exercises, setExercises] = useState([]);
+  const [bodyParts, setBodyParts] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchExerciseData = async () => {
+      const bodyPartsdata = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
+        exerciseOptions
+      );
+      setBodyParts(["all", ...bodyPartsdata]);
+    };
+    fetchExerciseData();
+  }, []);
+  console.log(bodyParts);
 
   const handleSearch = async () => {
     if (search) {
