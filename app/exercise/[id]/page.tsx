@@ -38,7 +38,7 @@ const Excerise = (props: Prop) => {
   }, [id]);
 
   return (
-    <div className="p-8 min-h-screen bg-red-200">
+    <div className="p-8 min-h-screen flex flex-col gap-10">
       {/* MAKE SURE YOU HAVE THE EXCERCISE DETAILS BEFORE RENDERING. I DID THIS BECAUSE OF ERROR I'M GETTING IN CONSOLE */}
       {exerciseDetail.gifUrl && <Detail exerciseDetail={exerciseDetail} />}
       {exerciseVideos.length > 1 && (
