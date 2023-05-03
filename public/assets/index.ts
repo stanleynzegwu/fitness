@@ -12,6 +12,9 @@ import gym from "./gym.png"
 import gymEquipment from "./gym-equipment.png"
 import bodyPartImage from "./bodyPart.png"
 import targetImage from "./target.png"
+import dotted from "./dotted.png"
+import dotted1 from "./dotted1.png"
+import blueDotted from "./blueDotted.png"
 
 export {
     neck,
@@ -28,5 +31,7 @@ export {
     gymEquipment,
     bodyPartImage,
     targetImage,
-
+    dotted,
+    dotted1,
+    blueDotted
 };

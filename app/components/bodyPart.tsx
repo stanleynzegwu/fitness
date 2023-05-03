@@ -10,7 +10,7 @@ interface Props {
 const BodyPart = ({ part, selectedBodyPart, setSelectedBodyPart }: Props) => {
   return (
     <div
-      className={`w-[220px]  inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300 ${
+      className={`w-[220px]  inline-block m-2 p-2 py-4 sm:py-6 cursor-pointer hover:scale-105 ease-in-out duration-300 bg-[#fbeff7] ${
         part === selectedBodyPart ? "border-t-4 border-red-600" : ""
       }`}
       onClick={() => {
@@ -18,7 +18,7 @@ const BodyPart = ({ part, selectedBodyPart, setSelectedBodyPart }: Props) => {
         window.scrollTo({ top: 800, left: 100, behavior: "smooth" });
       }}
     >
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center gap-5">
         <Image
           src={bodyPartIcon[part]}
           alt="bodypart"

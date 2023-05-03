@@ -1,12 +1,21 @@
+import Image from "next/image";
 import { FaHeartbeat } from "react-icons/fa";
 import { TbActivityHeartbeat } from "react-icons/tb";
 import { MdSportsGymnastics } from "react-icons/md";
+import { dotted, dotted1, blueDotted } from "@/public/assets";
 
-import Image from "next/image";
 import ShowNumbers from "../components/showNumbers";
 const Hero = () => {
   return (
     <section className="p-8 relative flex flex-col gap-1.5 h-fit bg-gradient-to-br from-[#FFF2F9] to-[#F7FDFF] md:h-screen md:flex-row">
+      <Image
+        src={blueDotted}
+        alt="dotted"
+        width={200}
+        height={200}
+        className="absolute top-[5px] left-0 font-bold text-7xl w-[250px] h-[150px]"
+      />
+
       <div className="w-full flex flex-col justify-center md:w-1/2 md:h-[100%]">
         <h1 className="text-5xl font-bold leading-normal ">
           Solutions For Moving Better And Feeling Healthier
@@ -60,8 +69,23 @@ const Hero = () => {
           height={450}
           className="object-contain lg:w-5/12"
           style={{ position: "absolute", transform: "rotateY(180deg)", zIndex: "20" }}
+          priority
         />
       </div>
+      <Image
+        src={dotted}
+        alt="dotted"
+        width={200}
+        height={200}
+        className="absolute top-0 right-0 font-bold text-7xl "
+      />
+      <Image
+        src={dotted1}
+        alt="dotted"
+        width={200}
+        height={200}
+        className="absolute top-[50%] left-[30%] font-bold text-7xl "
+      />
     </section>
   );
 };

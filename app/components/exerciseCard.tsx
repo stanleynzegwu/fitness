@@ -15,42 +15,19 @@ const ExerciseCard = ({ data }: { data: ExerciseData }) => {
   const { name, bodyPart, target, gifUrl, id } = data;
 
   return (
-    // <Link href={`/exercise/${id}`}>
-    //   <div>
-    //     <img src={gifUrl} alt="exercise gif" loading="lazy" />
-    //     <span>{name}</span>
-    //     <span>{bodyPart}</span>
-    //     <span>{target}</span>
-    //   </div>
-    // </Link>
-    <Link className="exercise-card" href={`/exercise/${id}`}>
+    <Link
+      className="p-2 bg-[#fff] exercise-card hover:scale-105 ease-in-out duration-300"
+      href={`/exercise/${id}`}
+    >
       <img src={gifUrl} alt={name} loading="lazy" />
-      <Stack direction="row">
-        <Button
-          sx={{
-            ml: "21px",
-            color: "#fff",
-            background: "#FFA9A9",
-            fontSize: "14px",
-            borderRadius: "20px",
-            textTransform: "capitalize",
-          }}
-        >
+      <div className="flex gap-4">
+        <span className="bg-[#EDD9E6] min-w-40 px-4 py-2 text-[#000000] capitalize font-semibold rounded-full">
           {bodyPart}
-        </Button>
-        <Button
-          sx={{
-            ml: "21px",
-            color: "#fff",
-            background: "#FCC757",
-            fontSize: "14px",
-            borderRadius: "20px",
-            textTransform: "capitalize",
-          }}
-        >
+        </span>
+        <span className="bg-[#8DB3E5] min-w-40 px-4 py-2 text-[#000000] capitalize font-semibold rounded-full">
           {target}
-        </Button>
-      </Stack>
+        </span>
+      </div>
       <Typography
         ml="21px"
         color="#000"

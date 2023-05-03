@@ -1,6 +1,6 @@
 "use client";
 
-import { Detail, ExerciseVideos, SimilarExercises } from "@/app/components";
+import { Detail, ExerciseVideos } from "@/app/components";
 import { exerciseDetailInitial } from "@/app/constants";
 interface Prop {
   params: {
@@ -11,13 +11,9 @@ import { useState, useEffect } from "react";
 import { exerciseOptions, fetchData, youtubeOptions } from "../../utils/fetchData";
 
 const Excerise = (props: Prop) => {
+  const { id } = props.params;
   const [exerciseDetail, setExerciseDetail] = useState(exerciseDetailInitial);
   const [exerciseVideos, setExerciseVideos] = useState([]);
-  const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
-  const [equipmentExercises, setEquipmentExercises] = useState([]);
-
-  const { id } = props.params;
-  console.log(exerciseVideos);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -37,18 +33,6 @@ const Excerise = (props: Prop) => {
         youtubeOptions
       );
       setExerciseVideos(exerciseVideosData.contents);
-
-      const targetMuscleExercisesData = await fetchData(
-        `${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`,
-        exerciseOptions
-      );
-      setTargetMuscleExercises(targetMuscleExercisesData);
-
-      const equimentExercisesData = await fetchData(
-        `${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`,
-        exerciseOptions
-      );
-      setEquipmentExercises(equimentExercisesData);
     };
     fetchExerciseData();
   }, [id]);
@@ -57,8 +41,9 @@ const Excerise = (props: Prop) => {
     <div className="p-8 min-h-screen bg-red-200">
       {/* MAKE SURE YOU HAVE THE EXCERCISE DETAILS BEFORE RENDERING. I DID THIS BECAUSE OF ERROR I'M GETTING IN CONSOLE */}
       {exerciseDetail.gifUrl && <Detail exerciseDetail={exerciseDetail} />}
-      <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
-      <SimilarExercises />
+      {exerciseVideos.length > 1 && (
+        <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
+      )}
     </div>
   );
 };

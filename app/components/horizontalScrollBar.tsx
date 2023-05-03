@@ -26,7 +26,7 @@ const slideRight = () => {
 
 const HorizontalScrollBar = ({ data, selectedBodyPart, setSelectedBodyPart }: Props) => {
   return (
-    <div className="relative flex items-center ">
+    <div className="relative flex items-center">
       <MdChevronLeft
         className="opacity-50 cursor-pointer hover:opacity-100"
         size={40}

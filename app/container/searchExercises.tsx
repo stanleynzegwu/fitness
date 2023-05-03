@@ -7,7 +7,7 @@ import { Box, Stack, Typography } from "@mui/material";
 
 import { state } from "../store";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
-import { Exercises, HorizontalScrollBar } from "../components";
+import { ButtonMedium, Exercises, HorizontalScrollBar } from "../components";
 
 const SearchExercises = () => {
   const snap = useSnapshot(state);
@@ -106,18 +106,21 @@ const SearchExercises = () => {
   }, [selectedBodyPart]);
 
   return (
-    <div className="min-h-[200px]">
-      <div className="text-left text-lg py-3 m-auto flex justify-center">
+    <div className="min-h-[200px] bg-gradient-to-br from-[#F7FDFF] to-[#FFF2F9]">
+      <div className="text-left text-lg py-3 m-auto flex justify-center gap-4">
         <input
-          className="rounded  mr-3 p-2 w-[450px]"
+          className=" border-[1px] border-[#9D9EA2] focus:outline-none focus:border-[#483EEC] focus:text-[#042A5B] rounded-full  p-2 pl-4 w-[250px] sm:w-[450px]"
           type="text"
-          placeholder="search sxercises"
+          placeholder="search exercises"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button className="rounded bg-red-600 px-9 py-2 text-white" onClick={handleSearch}>
-          Search
-        </button>
+        <ButtonMedium
+          text="Search"
+          bgColor="bg-red-600"
+          extraStyle="w-28 sm:32"
+          handleEvent={handleSearch}
+        />
       </div>
 
       <HorizontalScrollBar
