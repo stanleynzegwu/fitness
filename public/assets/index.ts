@@ -8,6 +8,10 @@ import lowerLeg from "./lower-leg.png"
 import upperLeg from "./upper-leg.png"
 import shoulder from "./shoulder.png"
 import waist from "./waist.png"
+import gym from "./gym.png"
+import gymEquipment from "./gym-equipment.png"
+import bodyPartImage from "./bodyPart.png"
+import targetImage from "./target.png"
 
 export {
     neck,
@@ -20,4 +24,9 @@ export {
     upperLeg,
     shoulder,
     waist,
+    gym,
+    gymEquipment,
+    bodyPartImage,
+    targetImage,
+
 };

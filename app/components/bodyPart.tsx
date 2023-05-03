@@ -1,5 +1,3 @@
-import { FaDumbbell } from "react-icons/fa";
-
 import { bodyPartIcon } from "../constants";
 import Image from "next/image";
 
@@ -26,7 +24,6 @@ const BodyPart = ({ part, selectedBodyPart, setSelectedBodyPart }: Props) => {
           alt="bodypart"
           className="w-[80px] h-[80px] object-contain"
         />
-        {/* <FaDumbbell size={40} /> */}
         <span className="capitalize font-semibold">{part}</span>
       </div>
     </div>

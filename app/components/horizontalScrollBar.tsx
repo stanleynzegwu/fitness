@@ -26,7 +26,7 @@ const slideRight = () => {
 
 const HorizontalScrollBar = ({ data, selectedBodyPart, setSelectedBodyPart }: Props) => {
   return (
-    <div className="relative flex items-center">
+    <div className="relative flex items-center ">
       <MdChevronLeft
         className="opacity-50 cursor-pointer hover:opacity-100"
         size={40}
@@ -34,7 +34,7 @@ const HorizontalScrollBar = ({ data, selectedBodyPart, setSelectedBodyPart }: Pr
       />
       <div
         id="sliderr"
-        className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+        className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide overflow-y-hidden"
       >
         {data.map((part, index) => (
           <BodyPart

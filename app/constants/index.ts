@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/image";
 
-import { back,cardio,chest,neck,lowerArm,upperArm,lowerLeg,upperLeg,shoulder,waist } from "@/public/assets";
+import { back,cardio,chest,gym,neck,lowerArm,upperArm,lowerLeg,upperLeg,shoulder,waist } from "@/public/assets";
 
 type BodyPartIcon = {
   [key: string]: StaticImageData;
@@ -30,7 +30,7 @@ const data = [
   ];
 
   const bodyPartIcon: BodyPartIcon = {
-    "all": neck,
+    "all": gym,
     "back": back,
     "cardio": cardio,
     "chest": chest,
@@ -43,5 +43,13 @@ const data = [
     "waist": waist
   }
 
-export { bodyPartIcon, data }
+  const exerciseDetailInitial = {
+    bodyPart: "",
+    gifUrl: "",
+    name: "",
+    target: "",
+    equipment: "",
+  }
+
+export { bodyPartIcon, data, exerciseDetailInitial }
 

@@ -2,7 +2,7 @@ import ExerciseCard from "./exerciseCard";
 
 interface Props {
   currentExercises: any[];
-  exercises: [];
+  exercises: {}[];
 }
 
 const Excerises = ({ currentExercises, exercises }: Props) => {
