@@ -1,9 +1,9 @@
 import ExerciseCard from "./exerciseCard";
 
-interface Props {
+type Props = {
   currentExercises: any[];
   exercises: {}[];
-}
+};
 
 const Excerises = ({ currentExercises, exercises }: Props) => {
   return (

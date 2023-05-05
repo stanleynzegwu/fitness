@@ -21,7 +21,7 @@ const Detail = ({ exerciseDetail }: { exerciseDetail: ExerciseDetail }) => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row md:p-20 items-center justify-between gap-8">
+    <div className="flex flex-col lg:flex-row md:px-20 items-center justify-between gap-8">
       <Image
         src={gifUrl}
         alt={name}
@@ -43,6 +43,8 @@ const Detail = ({ exerciseDetail }: { exerciseDetail: ExerciseDetail }) => {
             <Image
               src={icon}
               alt={name}
+              width={70}
+              height={70}
               className="w-[70px] h-[70px] p-2 rounded-full bg-[#EDD9E6]"
             />
             <span className="capitalize font-semibold">{name}</span>

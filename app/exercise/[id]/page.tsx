@@ -1,12 +1,13 @@
 "use client";
 
-import { Detail, ExerciseVideos } from "@/app/components";
+import { Detail, ExerciseVideos, BackButton } from "@/app/components";
 import { exerciseDetailInitial } from "@/app/constants";
-interface Prop {
+
+type Prop = {
   params: {
     id: string;
   };
-}
+};
 import { useState, useEffect } from "react";
 import { exerciseOptions, fetchData, youtubeOptions } from "../../utils/fetchData";
 
@@ -38,7 +39,8 @@ const Excerise = (props: Prop) => {
   }, [id]);
 
   return (
-    <div className="p-8 min-h-screen flex flex-col gap-10">
+    <div className="p-8 min-h-screen flex flex-col gap-10 bg-[#f5faff]">
+      <BackButton />
       {/* MAKE SURE YOU HAVE THE EXCERCISE DETAILS BEFORE RENDERING. I DID THIS BECAUSE OF ERROR I'M GETTING IN CONSOLE */}
       {exerciseDetail.gifUrl && <Detail exerciseDetail={exerciseDetail} />}
       {exerciseVideos.length > 1 && (

@@ -1,15 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Button, Stack, Typography } from "@mui/material";
-
-interface ExerciseData {
-  name: string;
-  bodyPart: string;
-  gifUrl: string;
-  id: string;
-  target: string;
-}
+import { Typography } from "@mui/material";
+import { ExerciseData } from "../Types/interfaces";
 
 const ExerciseCard = ({ data }: { data: ExerciseData }) => {
   const { name, bodyPart, target, gifUrl, id } = data;

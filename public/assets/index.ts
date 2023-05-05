@@ -15,6 +15,8 @@ import targetImage from "./target.png"
 import dotted from "./dotted.png"
 import dotted1 from "./dotted1.png"
 import blueDotted from "./blueDotted.png"
+import redDotted1 from "./redDotted1.png"
+import redDotted from "./redDotted.png"
 
 export {
     neck,
@@ -33,5 +35,7 @@ export {
     targetImage,
     dotted,
     dotted1,
-    blueDotted
+    blueDotted,
+    redDotted1,
+    redDotted
 };

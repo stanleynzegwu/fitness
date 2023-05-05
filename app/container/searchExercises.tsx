@@ -10,7 +10,6 @@ import { exerciseOptions, fetchData } from "../utils/fetchData";
 import { ButtonMedium, Exercises, HorizontalScrollBar } from "../components";
 
 const SearchExercises = () => {
-  const snap = useSnapshot(state);
   const [search, setSearch] = useState("");
   const [exercises, setExercises] = useState<{}[] | []>(state.exercises);
   const [bodyParts, setBodyParts] = useState<string[]>([]);
@@ -18,17 +17,6 @@ const SearchExercises = () => {
   const [exercisesPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // FETCH THE BODY PARTS ONCE COMPONENT IS LOADED
-  // useEffect(() => {
-  //   const fetchExerciseData = async () => {
-  //     const bodyPartsdata = await fetchData(
-  //       "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
-  //       exerciseOptions
-  //     );
-  //     setBodyParts(["all", ...bodyPartsdata]);
-  //   };
-  //   fetchExerciseData();
-  // }, []);
   console.log(state);
   useEffect(() => {
     const fetchExerciseData = async () => {
@@ -64,8 +52,10 @@ const SearchExercises = () => {
       );
 
       setSearch("");
-      state.exercises = [...searchedExercises];
-      setExercises(searchedExercises);
+      if (searchedExercises.length) {
+        state.exercises = [...searchedExercises];
+        setExercises(searchedExercises);
+      }
     }
   };
   // Pagination
@@ -109,7 +99,7 @@ const SearchExercises = () => {
     <div className="min-h-[200px] bg-gradient-to-br from-[#F7FDFF] to-[#FFF2F9]">
       <div className="text-left text-lg py-3 m-auto flex justify-center gap-4">
         <input
-          className=" border-[1px] border-[#9D9EA2] focus:outline-none focus:border-[#483EEC] focus:text-[#042A5B] rounded-full  p-2 pl-4 w-[250px] sm:w-[450px]"
+          className=" border-[1px] border-[#9D9EA2] focus:outline-none focus:border-[#f7dcee] focus:text-[#042A5B] rounded-full  p-2 pl-4 w-[250px] sm:w-[450px]"
           type="text"
           placeholder="search exercises"
           value={search}
@@ -117,7 +107,7 @@ const SearchExercises = () => {
         />
         <ButtonMedium
           text="Search"
-          bgColor="bg-red-600"
+          bgColor="bg-pink-500"
           extraStyle="w-28 sm:32"
           handleEvent={handleSearch}
         />

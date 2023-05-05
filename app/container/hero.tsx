@@ -2,21 +2,13 @@ import Image from "next/image";
 import { FaHeartbeat } from "react-icons/fa";
 import { TbActivityHeartbeat } from "react-icons/tb";
 import { MdSportsGymnastics } from "react-icons/md";
-import { dotted, dotted1, blueDotted } from "@/public/assets";
+import { dotted, blueDotted, redDotted, redDotted1 } from "@/public/assets";
 
 import ShowNumbers from "../components/showNumbers";
 const Hero = () => {
   return (
-    <section className="p-8 relative flex flex-col gap-1.5 h-fit bg-gradient-to-br from-[#FFF2F9] to-[#F7FDFF] md:h-screen md:flex-row">
-      <Image
-        src={blueDotted}
-        alt="dotted"
-        width={200}
-        height={200}
-        className="absolute top-[5px] left-0 font-bold text-7xl w-[250px] h-[150px]"
-      />
-
-      <div className="w-full flex flex-col justify-center md:w-1/2 md:h-[100%]">
+    <section className="p-8 relative flex flex-col gap-1.5 h-fit bg-gradient-to-br from-[#FFF2F9] to-[#F7FDFF] lg:h-screen lg:flex-row">
+      <div className="w-full flex flex-col justify-center lg:w-1/2 lg:h-[100%]">
         <h1 className="text-5xl font-bold leading-normal ">
           Solutions For Moving Better And Feeling Healthier
         </h1>
@@ -38,8 +30,8 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className=" flex justify-center h-[500px] items-center md:w-1/2 md:h-[100%]">
-        <div className=" w-[80%] bg-blue-200 h-[80%] rounded-t-full relative z-10 md:h-[80%]">
+      <div className=" flex justify-center h-[500px] items-center lg:w-1/2 lg:h-[100%]">
+        <div className=" w-[80%] bg-blue-200 h-[80%] rounded-t-full relative z-10 lg:h-[80%]">
           {/* heartbeat */}
           <div className="bg-white p-3 w-40 flex flex-col rounded-md absolute top-3 right-0">
             <p className="flex items-center justify-center gap-1">
@@ -72,15 +64,24 @@ const Hero = () => {
           priority
         />
       </div>
+
+      {/* DOTTED ABSOLUTE POSITIONED IMAGES */}
       <Image
-        src={dotted}
+        src={blueDotted}
+        alt="dotted"
+        width={200}
+        height={200}
+        className="absolute top-[5px] left-0 font-bold text-7xl w-[250px] h-[150px]"
+      />
+      <Image
+        src={redDotted}
         alt="dotted"
         width={200}
         height={200}
         className="absolute top-0 right-0 font-bold text-7xl "
       />
       <Image
-        src={dotted1}
+        src={redDotted1}
         alt="dotted"
         width={200}
         height={200}
