@@ -17,6 +17,9 @@ import dotted1 from "./dotted1.png"
 import blueDotted from "./blueDotted.png"
 import redDotted1 from "./redDotted1.png"
 import redDotted from "./redDotted.png"
+import femaleTrainer from "./female-trainer.png"
+import maleTrainer from "./male-trainer.png"
+import femaleTrainer1 from "./female-trainer1.png"
 
 export {
     neck,
@@ -37,5 +40,8 @@ export {
     dotted1,
     blueDotted,
     redDotted1,
-    redDotted
+    redDotted,
+    femaleTrainer,
+    maleTrainer,
+    femaleTrainer1
 };
