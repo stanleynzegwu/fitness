@@ -3,7 +3,7 @@ import { Navbar, Footer } from "./components";
 import { ReactNode } from "react";
 
 export const metadata = {
-  title: "FitGenius",
+  title: "Fitness & Wellness",
   description:
     "An exercise app where users can search for different body parts and discover targeted exercises.",
 };
