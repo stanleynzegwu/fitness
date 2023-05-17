@@ -51,5 +51,13 @@ const data = [
     equipment: "",
   }
 
-export { bodyPartIcon, data, exerciseDetailInitial }
+  const pricing = {
+    uniquePlan:[
+    { plan: "weekly", price: "$299", duration: "1 week memebership card" },
+    { plan: "monthly", price: "$499", duration: "3 months memebership card" },
+    { plan: "yearly", price: "$999", duration: "1 year memebership card" },
+  ],
+    constantData: ["Spaces and group classes","No time limit","Whenever you like"]
+  }
+export { bodyPartIcon, data, exerciseDetailInitial, pricing }
 

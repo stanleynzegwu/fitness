@@ -14,19 +14,19 @@ const slides = [
   },
   {
     testimony:
-      "As someone who struggles with staying motivated to exercise, this app has been a game changer for me. The personalized workout plans and reminders keep me on track, and the community support from other app users is so encouraging. I've already noticed a significant improvement in my strength and endurance. So grateful for this fitness office!",
+      "As someone who struggles with staying motivated to exercise, this app has been a game changer for me. The personalized workout plans and reminders keep me on track, and the community support from other app users is so encouraging. I've already noticed a significant improvement in my strength and endurance. ",
     name: "Mary Jane",
     country: "USA",
   },
   {
     testimony:
-      "I've tried a lot of different fitness programs and apps, but this one is hands down the best. The variety of workouts and challenges keep things interesting, and the ability to track my progress and see how I'm improving over time is really motivating. Plus, the trainers are so supportive and really know their stuff. I would recommend this app to anyone looking to improve their fitness.Lorem ipsum dolor s",
+      "I've tried a lot of different fitness programs and apps, but this one is hands down the best. The variety of workouts and challenges keep things interesting, and the ability to track my progress and see how I'm improving over time is really motivating. Plus, the trainers are so supportive and really know their",
     name: "John Dane",
     country: "USA",
   },
   {
     testimony:
-      "I was a little hesitant to try this app at first, but I'm so glad I did. The workouts are tough, but they're also really fun and I always leave feeling energized. The app itself is super user-friendly and I love being able to easily customize my workouts and track my progress. Overall, I'm really impressed with this fitness office and would definitely recommend it to others",
+      "I was a little hesitant to try this app at first, but I'm so glad I did. The workouts are tough, but they're also really fun and I always leave feeling energized. The app itself is super user-friendly and I love being able to easily customize my workouts and track my progress. Overall, I'm really impressed with",
     name: "Bary Jane",
     country: "USA",
   },
@@ -48,8 +48,8 @@ const TestimonialCard = () => {
   };
 
   return (
-    <div className="absolute w-[90%] sm:w-[70%] md:w-[50%] h-[50%] bottom-10 left-1/2 transform translate-x-[-50%] p-8 bg-white rounded-md flex flex-col justify-center">
-      <div className="max-w-[1400px] h-[700px] w-full m-auto py-16 px-4 relative group">
+    <div className="absolute w-[90%] sm:w-[70%] lg:w-[50%] h-[60%] md:h-[55%] bottom-10 left-1/2 transform translate-x-[-50%] p-8 bg-white rounded-md flex flex-col justify-center">
+      <div className="max-w-[1400px] h-full w-full flex flex-col justify-between p-4 relative group">
         <div className="w-full h-full rounded-2xl bg-center bg-cover duration-500">
           <p>{slides[currentIndex].testimony}</p>
           <span className="block font-bold mt-12">{slides[currentIndex].name}</span>

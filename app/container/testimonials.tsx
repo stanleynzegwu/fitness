@@ -41,7 +41,7 @@ const Testimonial = () => {
   return (
     <ContainerWrapper>
       <section className="relative px-8 min-h-screen h-screen flex flex-col-reverse max-md:items-center md:flex-row gap-16 bg-gradient-to-br from-[#F7FDFF] to-[#FFF2F9] pt-16">
-        <div className="w-[40%] h-[100%] my-auto flex flex-col justify-end">
+        <div className="w-[40%] sm:w-[60%] h-[100%] max-w-[500px] my-auto flex flex-col justify-end">
           <div className="hidden md:block w-[90%] h-full rounded-t-full bg-yellow-400">
             <img
               src="/assets/modelGroup.png"

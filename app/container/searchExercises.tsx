@@ -17,16 +17,17 @@ const SearchExercises = () => {
   const [exercisesPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(1);
 
-  console.log(state);
   useEffect(() => {
     const fetchExerciseData = async () => {
       const bodyPartsdata = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
       );
-      console.log("it rannn now");
-      state.bodyParts = ["all", ...bodyPartsdata];
-      setBodyParts(["all", ...bodyPartsdata]);
+      console.log("it ran now");
+      //check to make sure it returned an valid array
+      bodyPartsdata?.length &&
+        (state.bodyParts = ["all", ...bodyPartsdata]) &&
+        setBodyParts(["all", ...bodyPartsdata]);
     };
     state.bodyParts.length < 1 ? fetchExerciseData() : setBodyParts(state.bodyParts);
   }, []);
@@ -61,7 +62,9 @@ const SearchExercises = () => {
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+  const currentExercises = exercises?.length
+    ? exercises.slice(indexOfFirstExercise, indexOfLastExercise)
+    : [];
 
   const paginate = (event: any, value: number) => {
     setCurrentPage(value);
@@ -84,7 +87,7 @@ const SearchExercises = () => {
           exerciseOptions
         );
       }
-      state.exercises = [...exercisesData];
+      exercisesData?.length && (state.exercises = [...exercisesData]);
       state.selectedBodyPart = selectedBodyPart;
       setExercises(exercisesData);
     };
@@ -96,7 +99,7 @@ const SearchExercises = () => {
   }, [selectedBodyPart]);
 
   return (
-    <div className="min-h-[200px] bg-gradient-to-br from-[#F7FDFF] to-[#FFF2F9]">
+    <div className="px-2 py-4 min-h-[200px] bg-gradient-to-br from-[#F7FDFF] to-[#FFF2F9]">
       <div className="text-left text-lg py-3 m-auto flex justify-center gap-4">
         <input
           className=" border-[1px] border-[#9D9EA2] focus:outline-none focus:border-[#f7dcee] focus:text-[#042A5B] rounded-full  p-2 pl-4 w-[250px] sm:w-[450px]"
@@ -118,16 +121,16 @@ const SearchExercises = () => {
         selectedBodyPart={selectedBodyPart}
         setSelectedBodyPart={setSelectedBodyPart}
       />
-      {exercises.length > 1 && (
+      {exercises?.length > 1 && (
         <Exercises currentExercises={currentExercises} exercises={exercises} />
       )}
       <Stack sx={{ mt: { lg: "114px", xs: "70px" } }} alignItems="center">
-        {exercises.length > 9 && (
+        {exercises?.length > 9 && (
           <Pagination
             color="standard"
             shape="rounded"
             defaultPage={1}
-            count={Math.ceil(exercises.length / exercisesPerPage)}
+            count={Math.ceil(exercises?.length / exercisesPerPage)}
             page={currentPage}
             onChange={paginate}
             size="large"

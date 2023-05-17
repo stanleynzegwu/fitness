@@ -107,9 +107,9 @@ const Hero = () => {
         <h1 className="text-5xl font-bold leading-normal ">
           Solutions For Moving Better And Feeling Healthier
         </h1>
-        <p className="md:text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maxime sequi quisquam rem
-          deserunt.
+        <p className="md:text-lg text-gray-500">
+          Unlock your potential ! Sweat it out, build strength, improve endurance & feel better.
+          Join us today and discover a healthier, happier you!
         </p>
         <button className="bg-purple-700 text-white w-40 p-2 my-10 rounded-full mx-auto">
           Get Started
@@ -118,7 +118,7 @@ const Hero = () => {
           {[
             ["160K", "Members"],
             ["20M", "Customers"],
-            ["12K", "Review"],
+            ["12K", "Reviews"],
             ["35M", "Followers"],
           ].map(([value, name], index) => (
             <ShowNumbers key={index} value={value} name={name} />
@@ -129,7 +129,7 @@ const Hero = () => {
         <div className=" w-[85%] sm:w-[80%] md:w-[60%] lg:w-[80%] bg-blue-200 h-[80%] rounded-t-full relative z-10 lg:h-[80%] ">
           {/* heartbeat */}
           <div className="bg-white p-1 sm:p-3 w-40 flex flex-col rounded-md absolute top-3 right-0">
-            <p className="flex items-center justify-center gap-1">
+            <p className="flex items-center justify-center gap-1 text-gray-500">
               <FaHeartbeat className="text-red-600" />
               Heart Beat
             </p>
@@ -137,15 +137,15 @@ const Hero = () => {
           </div>
           {/* running */}
           <div className="bg-white p-1 sm:p-2 w-40 flex flex-col rounded-md absolute top-[50%] -right-[50px]">
-            <p className="flex items-center justify-center gap-1">
+            <p className="flex items-center justify-center gap-1 text-gray-500">
               <span className="text-red-600 font-semibold">96</span> BPM
               <TbActivityHeartbeat className="text-pink-500" />
             </p>
-            <p className="text-center">This minute running</p>
+            <p className="text-center text-gray-500">This minute running</p>
           </div>
           {/* calories */}
           <div className="bg-white p-1 sm:p-3 w-30 flex flex-col rounded-md absolute bottom-[-10%] right-[90%]">
-            <p className="text-black">Do Healthy Workouts</p>
+            <p className="text-gray-500">Do Healthy Workouts</p>
             <MdSportsGymnastics className="text-6xl mx-auto" />
           </div>
         </div>
@@ -173,7 +173,6 @@ const Hero = () => {
         alt="dotted"
         width={200}
         height={200}
-        // className="absolute top-0 right-0 font-bold text-7xl "
         className="absolute top-[60%] max-sm:-translate-y-[60%] right-0 md:top-[50%] max-md:-translate-y-[50%] md:right-5 lg:top-0 lg:right-0 font-bold text-7xl "
       />
       <Image
@@ -181,7 +180,7 @@ const Hero = () => {
         alt="dotted"
         width={200}
         height={200}
-        className="absolute top-[50%] left-[30%] font-bold text-7xl "
+        className="hidden md:absolute top-[50%] left-[30%] font-bold text-7xl "
       />
     </section>
   );

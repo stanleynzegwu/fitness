@@ -7,9 +7,15 @@ export const exerciseOptions = {
 };
 
 export const fetchData  = async (url:string, options: {}) => {
+  try{
     const response = await fetch(url, options)
     const data = await response.json()
     return data
+  }catch(err){
+    if (err instanceof Error) {
+      console.error(err.message); // accessing message property is now safe
+    }
+  }
 }
 
 export const youtubeOptions = {

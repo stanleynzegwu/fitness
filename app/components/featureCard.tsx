@@ -95,7 +95,7 @@ const FeatureCard = () => {
             <img
               src={img}
               alt="fitness"
-              className="absolute top-[50%] -translate-y-[50%] object-cover  h-[400px] w-[300px] rounded-t-full"
+              className="image absolute top-[50%] -translate-y-[50%] object-cover  h-[400px] w-[300px] rounded-t-full"
             />
             <span className="absolute bottom-[10%] lg:bottom-[20%] left-[50%] -translate-x-[50%] text-white text-lg">
               {name}

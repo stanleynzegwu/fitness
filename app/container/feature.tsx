@@ -29,7 +29,9 @@ const Feature = () => {
           <h3 className="text-2xl font-bold capitalize">
             <span className="border-solid border-b-2 border-red-500">our</span> features
           </h3>
-          <p className="text-3xl font-bold">find quality facilities in each of our studios</p>
+          <p className="text-3xl font-bold capitalize">
+            find quality facilities in each of our studios
+          </p>
           <button className="bg-purple-700 text-white w-32 p-2 rounded-full">Read more</button>
         </div>
 

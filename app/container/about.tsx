@@ -39,11 +39,12 @@ const About = () => {
           <h3 className="text-2xl font-bold capitalize">
             <span className="border-solid border-b-2 border-red-500">About</span> us
           </h3>
-          <p className="text-3xl font-bold">find quality facilities in each of our studios</p>
+          <p className="text-3xl font-bold capitalize">explore our fitness studio</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, exercitationem distinctio
-            aliquid expedita dolores impedit quasi nesciunt ad assumenda maiores libero quisquam
-            aliquam accusamus, perferendis quam amet tenetur harum vel.
+            Welcome to our fitness studio! We offer a range of fitness classes, state-of-the-art
+            equipment, and experienced trainers to help you reach your fitness goals. From yoga and
+            HIIT to personal training sessions, we have something for everyone. Come explore our
+            studio and see how we can help you achieve your best self!
           </p>
           <div className="flex gap-6">
             {[
