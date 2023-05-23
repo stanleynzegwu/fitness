@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      <SearchExercises />
+      {/* <SearchExercises /> */}
       <Feature />
       <About />
       <Team />

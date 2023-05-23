@@ -1,89 +1,54 @@
-"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { gym } from "@/public/assets";
 
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-
-const data = [
-  {
-    id: 1,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 2,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 3,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 4,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 5,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 6,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 7,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 8,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 9,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-  {
-    id: 10,
-    img: "https://media.gettyimages.com/id/955410340/photo/lionel-messi-of-barcelona-celebrates-after-scoring-his-sides-second-goal-during-the-la-liga.jpg?s=612x612&w=0&k=20&c=9wljmRD9EagjknGCMVgozldB7mKPaIO7IXCfQ3N2ZQ8=",
-  },
-];
-
-const slideLeft = () => {
-  let slider = document.querySelector("#slider");
-  if (slider) {
-    slider.scrollLeft = slider.scrollLeft - 500;
-  }
-};
-
-const slideRight = () => {
-  let slider = document.querySelector("#slider");
-  if (slider) {
-    slider.scrollLeft = slider.scrollLeft + 500;
-  }
-};
 const Footer = () => {
   return (
-    <div className="relative flex items-center">
-      <MdChevronLeft
-        className="opacity-50 cursor-pointer hover:opacity-100"
-        size={40}
-        onClick={slideLeft}
-      />
-      <div
-        id="slider"
-        className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
-      >
-        {data.map((item, index) => (
-          <img
-            className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
-            src={item.img}
-            alt="/j"
-            key={index}
-          />
-        ))}
+    <div className="px-8 py-16 flex flex-col">
+      <div className="flex flex-col pb-8 lg:flex-row w-full">
+        {/* company address */}
+        <div className="flex flex-col w-full lg:w-[35%]">
+          <Link href="/" className="flex gap-2 flex-center">
+            <Image src={gym} alt={"logo"} width={30} height={30} className="object-contain" />
+            <p className="hidden font-bold md:inline-block">FitGenius</p>
+          </Link>
+          <p>
+            lorem wetrere yteteteyjdyeuje beg <br /> weree yyyryr jjuuu
+            <br /> yeyeyet bchbbcb jdjejejejs
+          </p>
+        </div>
+        <div className="flex w-full flex-col items-between lg:justify-between lg:flex-row lg:w-[65%]">
+          <div className="flex flex-col">
+            <span className="font-bold capitalize pb-4">quick links</span>
+            <ul className="flex flex-col gap-2">
+              <li className="">about us</li>
+              <li className="">offer</li>
+              <li className="">offer</li>
+            </ul>
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold capitalize pb-4">support</span>
+            <ul className="flex flex-col gap-2">
+              <li className="">about us</li>
+              <li className="">offer</li>
+              <li className="">offer</li>
+            </ul>
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold capitalize pb-4">contact</span>
+            <ul className="flex flex-col gap-2">
+              <li className="">about us</li>
+              <li className="">offer</li>
+              <li className="">offer</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <MdChevronRight
-        className="opacity-50 cursor-pointer hover:opacity-100"
-        size={40}
-        onClick={slideRight}
-      />
+      <ul className="flex justify-center capitalize w-full pt-8 border-t-[1px] border-gray-300">
+        <li className="border-r-[1px] border-gray-300 px-2 text-gray-600">privacy policy</li>
+        <li className="border-r-[1px] border-gray-300 px-2 text-gray-600">terms of use</li>
+        <li className="px-2 text-gray-600">customer code</li>
+      </ul>
     </div>
   );
 };
