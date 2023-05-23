@@ -4,7 +4,7 @@ import { gym } from "@/public/assets";
 
 const Footer = () => {
   return (
-    <div className="px-8 py-16 flex flex-col">
+    <div className="px-8 py-10 flex flex-col">
       <div className="flex flex-col pb-8 lg:flex-row w-full">
         {/* company address */}
         <div className="flex flex-col w-full lg:w-[35%]">
@@ -21,25 +21,25 @@ const Footer = () => {
           <div className="flex flex-col">
             <span className="font-bold capitalize pb-4">quick links</span>
             <ul className="flex flex-col gap-2">
-              <li className="">about us</li>
-              <li className="">offer</li>
-              <li className="">offer</li>
+              <li className="capitalize">about us</li>
+              <li className="capitalize">offer</li>
+              <li className="capitalize">offer</li>
             </ul>
           </div>
           <div className="flex flex-col">
             <span className="font-bold capitalize pb-4">support</span>
             <ul className="flex flex-col gap-2">
-              <li className="">about us</li>
-              <li className="">offer</li>
-              <li className="">offer</li>
+              <li className="capitalize">about us</li>
+              <li className="capitalize">offer</li>
+              <li className="capitalize">offer</li>
             </ul>
           </div>
           <div className="flex flex-col">
             <span className="font-bold capitalize pb-4">contact</span>
             <ul className="flex flex-col gap-2">
-              <li className="">about us</li>
-              <li className="">offer</li>
-              <li className="">offer</li>
+              <li className="capitalize">about us</li>
+              <li className="capitalize">offer</li>
+              <li className="capitalize">offer</li>
             </ul>
           </div>
         </div>
