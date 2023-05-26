@@ -18,11 +18,11 @@ const Navbar = () => {
       </Link>
 
       <div className="hidden sm:flex gap-5 uppercase font-medium">
-        <span>about</span>
-        <span>features</span>
-        <span>services</span>
-        <span>pricing</span>
-        <span>contact</span>
+        <Link href="">about</Link>
+        <a href="#features">features</a>
+        {/* <a href="#services">services</a> */}
+        <a href="#pricing">pricing</a>
+        <a href="#contact">contact</a>
       </div>
 
       <div className="hidden sm:block">placeholder</div>

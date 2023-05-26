@@ -7,7 +7,7 @@ const Pricing = () => {
   const { uniquePlan, constantData } = pricing;
   return (
     <ContainerWrapper>
-      <section className="px-8 min-h-screen flex flex-col gap-6 justify-center">
+      <section className="px-8 min-h-screen flex flex-col gap-6 justify-center" id="pricing">
         <div className="mx-auto text-center">
           <h3 className="text-2xl font-bold capitalize">
             <span className="border-solid border-b-2 border-red-500">pricing</span> plan
